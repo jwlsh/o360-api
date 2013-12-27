@@ -16,7 +16,7 @@ public class PersonController {
 	@Autowired
 	PersonService personService;
 	
-	@RequestMapping(value = "/api/person/{id}",
+	@RequestMapping(value = "/api/v1.0/person/{id}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody Person get(@PathVariable("id") Long id) {
