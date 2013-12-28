@@ -15,6 +15,7 @@ public class PersonService {
 		p.setId(id);
 		p.setPartyId("P13213123123");
 		p.setFirstName("John");
+    p.setMiddleName("E");
 		p.setLastName("Walsh");
 		
 		ContactPoint cp = new ContactPoint();
@@ -41,6 +42,7 @@ public class PersonService {
 		pa.setCity("Fairport");
 		pa.setState("NY");
 		pa.setPostalCode("14450");
+    pa.setCounty("Monroe");
 		pa.setCountryCode("US");
 		
 		return pa;
