@@ -10,8 +10,22 @@
   <name>Open360 API</name>
 
   <properties>
+    
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    <!-- Spring -->
+    <spring-data-neo4j.version>2.2.2.RELEASE</spring-data-neo4j.version>
+    <spring-hateoas.version>0.7.0.RELEASE</spring-hateoas.version>
+    
+    <!-- Neo4j -->
+    <neo4j.version>1.9</neo4j.version>
+    
+    <!-- Hibernate Validator -->
+    <hibernate.version>4.2.0.Final</hibernate.version>
+    
+    <!-- Spring Boot Start Class -->
     <start-class>com.eaisys.o360.api.Application</start-class>
+    
   </properties>
 
   <parent>
@@ -44,6 +58,25 @@
         <version>1.12.2</version>
         <scope>provided</scope>
     </dependency>
+    
+    <!-- Neo4J & Hibernate Validator-->
+                <dependency>
+                    <groupId>org.springframework.data</groupId>
+                    <artifactId>spring-data-neo4j-rest</artifactId>
+                    <version>${spring-data-neo4j.version}</version>
+                    <exclusions>
+                                <exclusion>
+                                        <groupId>org.hibernate.javax.persistence</groupId>
+                                        <artifactId>hibernate-jpa-2.0-api</artifactId>
+                                </exclusion>
+                        </exclusions>
+                </dependency>
+                <dependency>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-validator</artifactId>
+                    <version>${hibernate.version}</version>
+                </dependency>
+    
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
