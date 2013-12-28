@@ -1,0 +1,8 @@
+---
+applications:
+- name: o360-api
+  memory: 256M
+  instances: 1
+  host: o360-api
+  domain: cfapps.io
+  path: ./o360-api-1.0-SNAPSHOT.jar
