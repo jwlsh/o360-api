@@ -1,9 +1,9 @@
 package com.eaisys.o360.api.domain;
 
+import org.springframework.data.neo4j.annotation.Indexed;
 import org.springframework.data.neo4j.annotation.NodeEntity;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
 import lombok.Data;
 
@@ -11,8 +11,8 @@ import lombok.Data;
 @NodeEntity
 public class Party extends BaseEntity {
 	
-	private Long id;
-	private String partyId;
-	private List<ContactPoint> contactPoints = new ArrayList<ContactPoint>();
+	@Indexed private String partyId;
+	private Set<ContactPoint> contactPoints;
+
 	
 }
